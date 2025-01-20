@@ -1,17 +1,27 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Bienvenue sur notre entreprise informatique pour recherche</h1>
-        <p>
-          Nous offrons des solutions informatiques personnalisées pour vos besoins professionnels.
-        </p>
-        <button>Contactez-nous</button>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
 }
 

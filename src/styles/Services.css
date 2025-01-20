@@ -1,0 +1,17 @@
+/* src/styles/Services.css */
+.services {
+  text-align: center;
+  padding: 20px;
+}
+
+.services h1 {
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
